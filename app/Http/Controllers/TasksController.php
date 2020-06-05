@@ -62,7 +62,7 @@ class TasksController extends Controller
                 }
 
             }
-            if($newProyect && $value["published"]=="Hace instantes"){
+            if($newProyect && ($value["published"]=="Hace instantes" || $value["published"]=="Just now")){
                 $newProyectData[$key] = $value;
             }
         }
