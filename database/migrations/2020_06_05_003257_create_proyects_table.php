@@ -15,14 +15,10 @@ class CreateProyectsTable extends Migration
     {
         Schema::create('proyects', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->string("published");
-            $table->string("deadline")->nullable();
-            $table->string("bids");
-            $table->string("country");
-            $table->string("link");
-            $table->string("price");
-            $table->longText("description");
+            $table->string("user_id");
+            $table->string("url");
+            $table->json("proyects_data")->nullable();
+            $table->integer("active")->default(1);
             $table->timestamps();
         });
     }

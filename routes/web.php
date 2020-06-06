@@ -11,10 +11,10 @@
 |
 */
 
-$router->get('/', "TasksController@getWorkanaInfo");
+$router->get('/', function(){
+    return "Workbot 1.0";
+});
 
-// $router->get('/', function(){
+$router->post('config', "TasksController@setConfig");
 
-//     return base_path('config');
-
-// });
+$router->get('trigger-alerts', "TasksController@triggerAlerts");
